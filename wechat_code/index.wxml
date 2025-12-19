@@ -1,0 +1,32 @@
+<view class="page-container">
+  <view class="status-bar {{connected ? 'online' : 'offline'}}">
+    <view class="dot"></view>
+    <text>{{connected ? '性能模式已激活' : '尝试连接小车...'}}</text>
+  </view>
+
+  <view class="control-box">
+    <view class="title">方向操控</view>
+    <view class="joystick-base" id="base" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <view class="center-hole"></view>
+      <view class="joystick-stick" style="{{stickStyle}}"></view>
+    </view>
+    <view class="cmd-display">当前状态：<text class="cmd-text">{{lastCmdName}}</text></view>
+  </view>
+
+  <view class="function-panel">
+    <view class="drift-toggle {{driftMode ? 'active' : ''}}" bindtap="toggleDrift">
+      <text class="fire-icon">🔥</text>
+      <text>DRIFT 模式: {{driftMode ? '开启' : '关闭'}}</text>
+    </view>
+
+    <view class="gear-section">
+      <view class="gear-title">基础动力等级</view>
+      <view class="gear-group">
+        <view class="gear-item {{gear==120?'on':''}}" bindtap="setGear" data-val="120">低速</view>
+        <view class="gear-item {{gear==180?'on':''}}" bindtap="setGear" data-val="180">中速</view>
+        <view class="gear-item {{gear==255?'on':''}}" bindtap="setGear" data-val="255">全速</view>
+      </view>
+      <view class="speed-progress"><view class="bar" style="{{speedStyle}}"></view></view>
+    </view>
+  </view>
+</view>

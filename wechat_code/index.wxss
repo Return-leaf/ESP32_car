@@ -1,0 +1,36 @@
+.page-container { height: 100vh; background: #121212; display: flex; flex-direction: column; align-items: center; color: #fff; }
+.status-bar { margin-top: 40rpx; padding: 10rpx 30rpx; background: #1E1E1E; border-radius: 30rpx; display: flex; align-items: center; font-size: 22rpx; border: 1rpx solid #333; }
+.dot { width: 12rpx; height: 12rpx; border-radius: 50%; margin-right: 12rpx; }
+.online .dot { background: #00FF9D; box-shadow: 0 0 10rpx #00FF9D; }
+.offline .dot { background: #FF4D4F; }
+
+/* 摇杆区 */
+.control-box { width: 90%; background: #1E1E1E; margin-top: 30rpx; border-radius: 40rpx; padding: 40rpx 0; display: flex; flex-direction: column; align-items: center; }
+.title { font-size: 24rpx; color: #666; margin-bottom: 30rpx; letter-spacing: 4rpx; }
+.joystick-base { width: 300rpx; height: 300rpx; background: #262626; border-radius: 150rpx; border: 6rpx solid #333; position: relative; }
+.center-hole { position: absolute; width: 40rpx; height: 40rpx; background: #121212; border-radius: 20rpx; left: 130rpx; top: 130rpx; }
+.joystick-stick { width: 110rpx; height: 110rpx; background: linear-gradient(135deg, #00DBDE 0%, #FC00FF 100%); border-radius: 55rpx; position: absolute; z-index: 100; box-shadow: 0 8rpx 25rpx rgba(0,0,0,0.5); }
+.cmd-display { margin-top: 25rpx; font-size: 24rpx; color: #666; }
+.cmd-text { color: #FC00FF; font-weight: bold; }
+
+/* 漂移按钮 */
+.function-panel { width: 90%; margin-top: 30rpx; }
+.drift-toggle {
+  width: 100%; padding: 35rpx 0; border-radius: 25rpx; background: #262626;
+  display: flex; align-items: center; justify-content: center; font-weight: bold;
+  border: 2rpx solid #333; transition: all 0.3s;
+}
+.drift-toggle.active {
+  background: #FF4D4F; color: #fff; border-color: #FF7875;
+  box-shadow: 0 0 30rpx rgba(255, 77, 79, 0.4);
+}
+.fire-icon { margin-right: 15rpx; font-size: 32rpx; }
+
+/* 挡位区 */
+.gear-section { margin-top: 30rpx; background: #1E1E1E; padding: 30rpx; border-radius: 30rpx; }
+.gear-title { font-size: 22rpx; color: #666; margin-bottom: 20rpx; text-align: center; }
+.gear-group { display: flex; justify-content: space-between; margin-bottom: 30rpx; }
+.gear-item { flex: 1; margin: 0 10rpx; padding: 20rpx 0; text-align: center; background: #262626; border-radius: 15rpx; font-size: 22rpx; color: #999; }
+.gear-item.on { background: #FC00FF; color: #fff; box-shadow: 0 4rpx 15rpx rgba(252, 0, 255, 0.3); }
+.speed-progress { height: 6rpx; background: #121212; border-radius: 3rpx; overflow: hidden; }
+.bar { height: 100%; background: #FC00FF; transition: width 0.3s; }
