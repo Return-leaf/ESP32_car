@@ -1,4 +1,4 @@
-#include <Arduino.h>
+﻿#include <Arduino.h>
 #include <WiFi.h>
 #include <WebSocketsServer.h>
 
@@ -17,7 +17,7 @@ const int enPins[] = {1, 2, 42, 41};
 // 2. WiFi 联网配置
 // ==========================================
 const char* ssid = "YOUR_HOTSPOT_SSID";        // 手机热点名称
-const char* password = "1379258046";  // 热点密码
+const char* password = "YOUR_HOTSPOT_PASSWORD";  // 热点密码
 
 // 创建 WebSocket 服务器实例，监听 81 端口
 WebSocketsServer webSocket = WebSocketsServer(81);
